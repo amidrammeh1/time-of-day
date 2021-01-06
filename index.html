@@ -124,22 +124,22 @@
       </small>
     </footer>
     <!-- END Footer -->
+    <script>
+      let myDate = new Date();
+      let myHours = myDate.getHours();
+      let myGreeting = "";
+      let myColor = "";
+
+      if (myHours > 12) {
+        myGreeting = "Good afternoon!";
+        myColor = "blue";
+      } else {
+        myGreeting = "Good morning?";
+        myColor = "yellow";
+      }
+
+      document.getElementById("mydiv").innerHTML = myGreeting;
+      document.body.style.backgroundColor = myColor;
+    </script>
   </body>
-  <script>
-    let myDate = new Date();
-    let myHours = myDate.getHours();
-    let myGreeting = "";
-    let myColor = "";
-
-    if (myHours > 12) {
-      myGreeting = "Good afternoon!";
-      myColor = "blue";
-    } else {
-      myGreeting = "Good morning?";
-      myColor = "yellow";
-    }
-
-    document.getElementById("mydiv").innerHTML = myGreeting;
-    document.body.style.backgroundColor = myColor;
-  </script>
 </html>
