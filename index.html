@@ -83,6 +83,7 @@
     </header>
     <main>
       <header><h3>IT 121 Assignment Ami Drammeh</h3></header>
+      <div id="mydiv">Greeting goes here</div>
       <p>
         This HTML5 Flexible template could be a good starting point for some of
         your projects. The template file starts by setting a background color on
@@ -131,19 +132,14 @@
       let myColor = "";
 
       myHours = 8;
-      /*if (myHours > 12) {
-        myGreeting = "Good afternoon!";
-        myColor = "blue";
-      } else {
-        myGreeting = "Good morning?";
-        myColor = "yellow";
-      }
-      */
+      
       if(myHours >= 5 && myHours <12){
-    alert('Good morning');
-      }else{  
-        alert('NOT morning');
-}
+        myGreeting = "Good Morning";
+        myColor = "Yellow";
+        }else{  
+          alert('NOT morning');
+  }
+
 
       document.getElementById("mydiv").innerHTML = myGreeting;
       document.body.style.backgroundColor = myColor;
