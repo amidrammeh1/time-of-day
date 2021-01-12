@@ -69,7 +69,7 @@
   </head>
   <body>
     <header>
-      <h1 class="masthead">HTML5 Flexible Template</h1>
+      <h1 class="masthead">Time of Day</h1>
       <nav>
         <ul>
           <li><a href="#">Link 1</a></li>
@@ -105,10 +105,7 @@
       </p>
       <p>The FOOTER includes a clear:both to keep everything above it!</p>
       <img
-        src="http://dummyimage.com/300x400"
-        alt="Picture of Me!"
-        class="flexible"
-      />
+        src="images/afternoon.jpg"alt="Time of day pic" id="mypic" class="flexible"/>
     </main>
     <footer>
       <small
@@ -130,12 +127,21 @@
       let myHours = myDate.getHours();
       let myGreeting = "";
       let myColor = "";
+      let myPic = "images/";
 
-      myHours = 8;
+      myHours = 15;
       
       if(myHours >= 5 && myHours <12){
-        myGreeting = "Good Morning";
+        myGreeting = "Good Morning!";
         myColor = "Yellow";
+        myPic += "morning.jpg";
+
+      } else if (myHours >= 12 && myHours <18) {
+        myGreeting = "Good Afternoon!";
+        myColor = "Orange";
+        myPic += "afternoon.jpg";
+
+
         }else{  
           alert('NOT morning');
   }
@@ -143,6 +149,7 @@
 
       document.getElementById("mydiv").innerHTML = myGreeting;
       document.body.style.backgroundColor = myColor;
+      document.getElementById("mypic").src = myPic;
     </script>
   </body>
 </html>
